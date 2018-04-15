@@ -25,6 +25,10 @@ class DataTransformer:
 
 class DataLoader:
     def load(self, refinedhistdata):
+        server = '<Server>' 
+        database = '<DB>' 
+        username = 'User' 
+        password = 'PWD' 
 
         params = urllib.quote_plus("DRIVER={ODBC Driver 13 for SQL Server};SERVER="+ server +";DATABASE="+ database+";UID="+ username+";PWD="+ password+"")
         engine = sqlalchemy.create_engine("mssql+pyodbc:///?odbc_connect=%s" % params)
